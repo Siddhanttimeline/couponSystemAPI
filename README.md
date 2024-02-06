@@ -1,7 +1,6 @@
-# coverSelfAssignment
+# couponSystemAPI
 
-## Please find the attached api documentation below which contains the request and response structure.
-[https://documenter.getpostman.com/view/21660346/2s9YR6ZZ3o]
+## Please refer to the API documentation for the request and response structure, as well as information on discount criteria and logic.
 
 ## Tech and Framework used
 1. Java version: 20.0.1
@@ -11,10 +10,14 @@
 5. IDE : Eclipse IDE  (Version: 2023-09 (4.29.0)) 
 
 ## Rest API
-1. Created a rest controller for the end point api/products/{promotionSet}
-2. promotionSet can take values : promotionSetA and promotionSetB to apply the respective discount coupouns.
-3. When no promotionSet is given then the api will continue without applying any discount coupon.
-4. In ProductService, hitting the mentioned urls to get the product lists and exchange rate.
-5. Performing the expected operations on the results.
-6. Created a mehtod to write the response : This private method writes the given data to a JSON file located at the specified directory (D:/). It first creates the necessary directories if they do not exist, then writes the data to the file named output.json.
-7. java -jar coverself-0.0.1-SNAPSHOT.jar promotionSetA / java -jar coverself-0.0.1-SNAPSHOT.jar promotionSetB to run the jar.
+
+- Retrieve the product details by calling the third-party JSON API.
+- Convert the prices to INR if the price is not in INR using exchangeratesapi.io.
+- Save the JSON file (named output.json) into the target folder for backup of the applied discounts (Here we can gather other required data if necessary according to the company using the API - In Development).
+- Created a REST controller for the endpoint api/products/{promotionSet}.
+- PromotionSet can take values: promotionSetA and promotionSetB to apply the respective discount coupons.
+- When no promotionSet is provided, the API will continue without applying any discount coupons.
+- In ProductService, fetch the product lists and exchange rates by hitting the mentioned URLs.
+- Perform the expected operations on the results.
+- Created a method to write the response: This private method writes the given data to a JSON file located at the specified directory (D:/). It first creates the necessary directories if they do not exist, then writes the data to the file named output.json.
+- Use java -jar coverself-0.0.1-SNAPSHOT.jar promotionSetA or java -jar coverself-0.0.1-SNAPSHOT.jar promotionSetB to run the JAR.
