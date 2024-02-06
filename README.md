@@ -1,6 +1,8 @@
 # couponSystemAPI
 
 ## Please refer to the API documentation for the request and response structure, as well as information on discount criteria and logic.
+[API Documentation]( https://www.notion.so/Coupon-System-API-0402639953b243e7be4aa70cef7bb396?pvs=4 )
+
 
 ## Tech and Framework used
 1. Java version: 20.0.1
